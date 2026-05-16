@@ -160,6 +160,14 @@ Compatível com:
 
 <br>
 
+Uma mesma conta/API principal pode organizar múltiplos projetos usando Sub APIs isoladas.
+
+Mesmo que duas Sub APIs usem o mesmo nome de canal e o mesmo nome de evento, os eventos não colidem entre elas.
+
+Cada Sub API possui credenciais próprias e roteamento independente dentro da infraestrutura realtime.
+
+<br>
+
 # ⚡ Conexão rápida com JavaScript
 
 ```html
