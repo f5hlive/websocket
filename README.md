@@ -168,6 +168,51 @@ Cada Sub API possui credenciais próprias e roteamento independente dentro da in
 
 <br>
 
+## Canais, eventos e isolamento
+
+A F5HLIVE trabalha com canais abertos dentro do contexto de uma API/Sub API.
+
+Um mesmo cliente pode se inscrever em múltiplos canais ao mesmo tempo e receber eventos continuamente em todos eles.
+
+Os nomes de canais e eventos são flexíveis. O servidor aceita nomes personalizados, incluindo nomes simples como `my-channel`, `updates`, `chat`, `notifications`, ou padrões como `private-*` e `presence-*`.
+
+O isolamento não depende apenas do nome do canal.
+
+Cada canal pertence ao contexto das credenciais utilizadas na conexão. Por isso, duas APIs diferentes podem usar o mesmo nome de canal e evento sem colisão entre elas.
+
+<br>
+
+## Modos de autenticação
+
+A plataforma suporta diferentes níveis de autenticação conforme a necessidade do projeto.
+
+### Modo simples
+
+Ideal para testes rápidos, demos e aplicações leves.
+
+Neste modo, a conexão pode ser realizada usando a API Key. O servidor valida a credencial, identifica a aplicação e controla conexões, mensagens e consumo.
+
+### Modo completo
+
+Indicado para produção e ambientes que exigem maior segurança.
+
+Neste modo, o envio de eventos e operações sensíveis exigem validação completa das credenciais, incluindo App ID, API Key, Secret Key e assinatura da requisição.
+
+### Proteção por domínio/origem
+
+Além das credenciais, a F5HLIVE pode validar domínio, origem e referência da requisição.
+
+A validação não ocorre apenas na abertura da conexão. O sistema verifica o domínio/origem em diferentes etapas do fluxo, incluindo conexão, autenticação, publicação e entrega de eventos.
+
+Se a origem não estiver autorizada, a conexão ou publicação é bloqueada antes de entrar no fluxo realtime.
+
+<br>
+
+> Usar nomes como `private-*` ou `presence-*` não torna automaticamente um canal privado no modo simples.
+> A proteção real depende do modo de autenticação configurado e das regras aplicadas à API.
+
+<br>
+
 # ⚡ Conexão rápida com JavaScript
 
 ```html
