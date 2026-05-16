@@ -86,6 +86,14 @@ Sem necessidade de configurar manualmente:
 
 <br>
 
+## 📡 SSE / EventSource Support
+
+A infraestrutura F5HLIVE suporta conexões SSE persistentes com gerenciamento automático de reconexão e distribuição unificada de eventos.
+
+Eventos enviados via WebSocket podem ser recebidos normalmente por clientes conectados via SSE/EventSource.
+
+<br>
+
 ## 🔐 Segurança flexível
 
 A plataforma suporta diferentes níveis de autenticação.
