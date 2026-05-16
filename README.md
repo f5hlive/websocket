@@ -213,7 +213,9 @@ Se a origem não estiver autorizada, a conexão ou publicação é bloqueada ant
 
 <br>
 Os prefixos ajudam a organizar e manter compatibilidade com padrões conhecidos, mas a segurança é definida pelas regras da API, não apenas pelo nome do canal.
+
 <br>
+
 # ⚡ Conexão rápida com JavaScript
 
 ```html
